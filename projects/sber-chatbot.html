@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UX чат-бота ДомКлик - кейс Виталия Болатаева</title>
+<meta name="description" content="Проектирование диалогового бота для ипотечной цифровой фабрики Сбера: от MVP на «да/нет» до автоматизации 45% работы контакт-центра.">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="../index.html" class="nav-mark"><b>Виталий Болатаев</b></a>
+    <button class="nav-toggle" aria-label="Меню" aria-expanded="false">☰</button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Главная</a></li>
+      <li><a href="../about.html">Обо мне</a></li>
+      <li><a href="../projects.html" class="active">Проекты</a></li>
+      <li><a href="../talks.html">Выступления</a></li>
+      <li><a href="../tools.html">Инструменты</a></li>
+      <li><a href="../publications.html">Публикации</a></li>
+      <li><a href="../blog.html">Блог</a></li>
+      <li><a href="../contacts.html">Контакты</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="case-hero">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="../projects.html">Архив проектов</a><span>/</span><span>№ 004</span></div>
+    <div class="eyebrow">Conversational UX · райтинг</div>
+    <h1>UX чат-бота ДомКлик</h1>
+    <p style="color:var(--cream-muted); font-size:17px; max-width:60ch;">
+      Диалоговый бот для цифровой фабрики ипотеки: от «чудовищного флоу»
+      на бумаге до 45% автоматизации труда контакт-центра.
+    </p>
+    <div class="case-meta-grid">
+      <div><div class="k">Роль</div><div class="v">UX, диалоговый райтер</div></div>
+      <div><div class="k">Заказчик</div><div class="v">Сбер / ДомКлик</div></div>
+      <div><div class="k">Период</div><div class="v">2020-2021, первый год</div></div>
+      <div><div class="k">Эффект</div><div class="v">-45% нагрузки на людей</div></div>
+    </div>
+  </div>
+</header>
+
+<section class="case-body">
+  <div class="wrap">
+    <div class="case-content">
+
+      <h2>Контекст</h2>
+      <p>В рамках платформы обработки естественного языка Сбера был разработан
+        проект чат-бота, который отвечал на вопросы пользователей об ипотеке.
+        Я выполнял роль UX и райтера диалогов на проекте чат-бота ДомКлик и в
+        тесной связке с командой развивал продукт бота в течение первого года:
+        от проектирования и до запуска, а также первые месяцы правок и
+        улучшений.</p>
+
+      <figure>
+        <img src="../assets/img/sber-bot-1.png" alt="Интерфейс чат-бота ДомКлик">
+        <figcaption>Один из экранов бота: саджест «Документы для заявки».</figcaption>
+      </figure>
+
+      <p>Первоначально бот отвечает по запросу с кнопками: пользователь
+        выбирает активный саджест «Документы для заявки» и получает нужный
+        список документов для ипотеки. Вторым способом входа в бот стало
+        распознавание текста при общении с живым оператором. <strong>Основная
+        продуктовая цель - автоматизация труда сотрудников цифровой фабрики
+        по выдаче ипотечных кредитов.</strong></p>
+
+      <figure>
+        <img src="../assets/img/sber-bot-2.png" alt="Сценарий диалога бота">
+      </figure>
+
+      <h2>Как строился диалог</h2>
+
+      <div class="step">Этап 1 · MVP</div>
+      <p>Бот запускался без кнопок - это было бы слишком дорого с точки зрения
+        платформы. Я предложил вариант с ответами «Да» и «Нет», чтобы
+        построить дерево диалога.</p>
+
+      <figure>
+        <img src="../assets/img/sber-bot-3.png" alt="Дерево диалога да/нет">
+      </figure>
+
+      <div class="step">Этап 2 · сбор данных</div>
+      <p>Совместно с продакт-менеджером провёл ряд интервью с основными
+        стейкхолдерами проекта - менеджерами контакт-центра и цифровой
+        фабрики. В результате получился по-настоящему сложный флоу.</p>
+
+      <figure>
+        <img src="../assets/img/sber-bot-flow.png" alt="Полная схема диалогового флоу бота">
+        <figcaption>Итоговая схема диалогового дерева бота.</figcaption>
+      </figure>
+
+      <div class="step">Этап 3 · метрики</div>
+      <p>Определили два типа метрик. Первая - автоматизация труда, которую
+        считали как дохождение до конца диалога: бот дал ответ, и вопрос
+        пользователя закрыт. Такую метрику отмечал на флоу красным цветом.</p>
+
+      <figure>
+        <img src="../assets/img/sber-bot-metrics.png" alt="Метрики успешных диалогов на флоу">
+        <figcaption>Узкочастотный запрос боту с отметками метрик успеха.</figcaption>
+      </figure>
+
+      <p>Вторая метрика - субъективная удовлетворённость пользователя ответом
+        бота (CSI). Для контроля качества бота отрисовал отдельную модалку
+        оценки.</p>
+
+      <figure>
+        <img src="../assets/img/sber-bot-csi.png" alt="Модальное окно оценки CSI">
+      </figure>
+
+      <div class="step">Этап 4 · масштабирование</div>
+      <p>Постепенное включение и доработка дополнительных небольших сценариев,
+        которые «вешаем» на NLP-платформу.</p>
+
+      <div class="result-box">
+        <h3>Результат</h3>
+        <p>Через полгода стало заметно сокращение работы людей в контакт-центре
+          на 45% - эффект, который можно было измерить в деньгах за счёт ФОТ.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="case-nav">
+    <a href="x5-fabrika-idey.html">← Предыдущий кейс: Фабрика идей X5</a>
+    <a href="domclick-achievements.html">Следующий кейс: ачивки контакт-центра →</a>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-mark">© Виталий Болатаев · архив обновляется</div>
+    <div class="footer-links">
+      <a href="mailto:v.v.bolatev@gmail.com">Email</a>
+      <a href="https://t.me/lilalogos" target="_blank" rel="noopener">Telegram</a>
+      <a href="https://www.linkedin.com/in/%D0%B2%D0%B8%D1%82%D0%B0%D0%BB%D0%B8%D0%B9-%D0%B1%D0%BE%D0%BB%D0%B0%D1%82%D0%B0%D0%B5%D0%B2-33798210a/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.facebook.com/vitaliy.bolataev/" target="_blank" rel="noopener">Facebook</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
